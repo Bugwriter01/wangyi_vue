@@ -1,23 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
+    <!-- <Home/> -->
+    <Footer v-show="$route.meta.showFooter"/>
   </div>
 </template>
 
 <script>
+import Home from './pages/Home/Home'
+import Footer from './components/Footer/Footer'
+
+
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    Footer,
+   
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
