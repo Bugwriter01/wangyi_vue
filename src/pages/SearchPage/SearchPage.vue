@@ -2,7 +2,7 @@
   <div class="search_page">
 		<div class="search_header">
 			<input type="text" class="search_input" placeholder="硅藻土浴室地垫,直降29元">
-			<span class="cancel">取消</span>
+			<span class="cancel" @click="$router.push({path:'/home'})">取消</span>
 		</div>
 		<div class="hot_search">热门搜索</div>		 
 		<ul class="nav_list">
@@ -71,10 +71,11 @@
 		font-size 30px
 		margin 20px 0 0 20px
 	.nav_list
-		float left
+		
 		height 420px
 		padding 0 30px 0 30px
-		li			
+		li	
+			float left		
 			height 48px
 			border 1px solid #333
 			border-radius 5px

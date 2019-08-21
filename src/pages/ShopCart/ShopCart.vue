@@ -68,7 +68,8 @@
 				color #666
 	.shopcart_content
 		text-align center
-		
+		height 1176px
+		background #F4F4F4
 		img 
 			margin 345px auto 0
 		p
@@ -85,19 +86,4 @@
 				text-align center
 				line-height 70px
 				margin-top 50px
-
-
-
-
-
-				
-
-
-
-		
-		
-				
-
-		
-
 </style>

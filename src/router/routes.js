@@ -5,6 +5,10 @@ import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Topic from '../pages/Topic/Topic.vue'
 import Usercenter from '../pages/Usercenter/Usercenter.vue'
 import SearchPage from '../pages/SearchPage/SearchPage.vue'
+import PhoneLogin from '../pages/Usercenter/PhoneLogin/PhoneLogin.vue'
+import EmailLogin from '../pages/Usercenter/EmailLogin/EmailLogin.vue'
+import FastLogin from '../pages/Usercenter/FastLogin/FastLogin.vue'
+
 export default[
   {
     path:'/home',
@@ -24,7 +28,7 @@ export default[
     path:'/shopCart',
     component:ShopCart,
     meta:{
-      showFooter:false
+      showFooter:true
     }
   },
    {
@@ -39,7 +43,29 @@ export default[
     component:Usercenter,
     meta:{
       showFooter:false
-    }
+    },
+ 
+  },
+  {
+    path:'/phonelogin',
+    component:PhoneLogin,
+    meta:{
+      showFooter:false
+    },
+  },
+  {
+    path:'/emaillogin',
+    component:EmailLogin,
+    meta:{
+      showFooter:false
+    },
+  },
+  {
+    path:'/fastlogin',
+    component:FastLogin,
+    meta:{
+      showFooter:false
+    },
   },
   {
     path:'/',

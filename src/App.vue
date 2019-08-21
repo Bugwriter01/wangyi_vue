@@ -7,10 +7,7 @@
 </template>
 
 <script>
-import Home from './pages/Home/Home'
 import Footer from './components/Footer/Footer'
-
-
 export default {
   name: 'App',
   components:{

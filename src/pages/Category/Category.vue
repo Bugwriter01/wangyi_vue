@@ -160,7 +160,7 @@ import BScroll from 'better-scroll'
 				color #7e8c8d
 				margin-top 50px
 				text-align center
-				&:active
+				&.active
 					color red	
 		.category_list_right
 			box-sizing border-box

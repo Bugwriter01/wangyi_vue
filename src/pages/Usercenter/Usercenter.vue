@@ -1,35 +1,39 @@
 <template>
     <div class="user_center">
-			<div class="user_header">
-				<div class="header_left">
-					<i class="iconfont icon-shouye"></i>
-				</div>
-				<div class="header_center">
-					<span>网易严选</span>
-				</div>
-				<div class="header_right">
-						<i class="iconfont icon-sousuo"></i>
-						<i class="iconfont icon-gouwuche"></i>
-				</div>
-			</div>
+			<LoginHeader/>
 			<div class="user_login">
 				<div class="user_img">
 					<img src="https://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="">
 				</div>
 				<div class="phone_login">						
-						<button class="phone_login_btn">
+						<button class="phone_login_btn" @click="$router.push({path:'/phonelogin'})">
 							<i class="iconfont icon-shouji"></i>
 							手机号码登录</button>
 				</div>
 				<div class="eamil_login">						
-						<button class="email_login_btn">
+						<button class="email_login_btn" @click="$router.push({path:'/emaillogin'})">
 							<i class="iconfont icon-email"></i>
 							邮箱账号登录</button>
 				</div>
-				<div class="phonetitle">
-					手机号快速注册>
+				<div class="login_way">
+					<div class="wei_chat">						
+							<i class="iconfont icon-weixnhao"></i>	
+							<span>微信</span>										
+					</div>
+				
+					<div class="qq">
+							<i class="iconfont icon-qq"></i>	
+							<span>QQ</span>			
+					</div>
+					<div class="weibo">
+							<i class="iconfont icon-weibo"></i>	
+							<span>微博</span>			
+					</div>
 				</div>
+			
 			</div>
+				<router-view/>
+
 		</div>
 </template>
 
@@ -41,37 +45,14 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 .user_center
+	position relative
 	width 100%
 	height 100%
-	.user_header
-		height 88px
-		display flex
-		background-color #fff
-		.header_left
-			height 100%
-			line-height 88px
-			margin-left 24px		
-			.icon-shouye
-				font-size 50px
-		.header_center
-			width 60%
-			display flex
-			justify-content center
-			margin-left 36px 
-			span 
-				font-size 36px			
-				line-height 88px
-				text-align center 
-		.header_right
-			line-height 88px
-			.iconfont
-				font-size 50px
-				margin-left 30px 
 	.user_login
 		width 100%
-		height 1200px
-		background #eee
-		z-index 100
+		height 1246px
+		background #F2F5F4
+	
 	.user_img
 		width 100%
 		height 480px
@@ -105,15 +86,50 @@
 			width 680px 
 			height 98px
 			text-align center
-			background-color #eee 
+			background-color #F2F5F4
 			margin 32px 0 0 
 			color  #b4282d
 			border 1px solid  #b4282d
 			.icon-email
 				font-size 30px
-	.phonetitle	
+	.login_way
 		width 100%
+		height 40px
+		position absolute
+		left 0
+		bottom 90px
+		display flex
+		justify-content center
 		text-align center
-		font-size 28px
+		line-height 40px
+		.wei_chat
+			border-right 1px solid #666
+			margin-right 32px
+			.icon-weixnhao
+				font-size 36px
+				color #666
+			span
+				margin-right 32px
+
+				font-size 30px
+				color #666
+		.qq
+			margin-right 32px
+			border-right 1px solid #666
+			.icon-qq
+				font-size 36px
+				color #666
+			span
+				margin-right 32px
+
+				font-size 30px	
+		.weibo
+			margin-right 32px
+			.icon-weibo
+				font-size 36px
+				color #666
+			span
+				font-size 30px
+				color #666
 
 </style>

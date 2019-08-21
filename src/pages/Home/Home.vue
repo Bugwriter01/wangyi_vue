@@ -167,36 +167,6 @@
           </li>
           </ul>
         </div>
-        <div class="brands">
-          <div class="goods_brand">
-            <span class="goods_brand_text">品牌制造商直供</span>
-            <span class="brand_more">更多></span>
-          </div>
-          <div class="brand_container">
-            <ul class="brand_list">
-              <a href="" class="brand_item" style="background-image:url(https://yanxuan.nosdn.127.net/74e2ea8f81004d0a60f90fc8e4649058.png?imageView&thumbnail=343y260&enlarge=1);
-">
-                <div class="brand_box">
-                  <span class="brand_item_text">海外制造商</span>
-                  <span class="brand_item_price">9.9元起</span>
-                </div>
-
-              </a>
-              <a href="" class="brand_item">
-                <h4>海外制造商</h4>
-                <span>9.9元起</span>
-              </a>
-              <a href="" class="brand_item">
-                <h4>海外制造商</h4>
-                <span>9.9元起</span>
-              </a>
-              <a href="" class="brand_item">
-                <h4>海外制造商</h4>
-                <span>9.9元起</span>
-              </a>
-            </ul>
-          </div>
-        </div>
         <div class="private">私人定制</div>
       </section>
       <section class="category"></section>
@@ -354,26 +324,7 @@ export default {
         color #000000
         margin-right 50px
         line-height 100px
-    .brand_container
-      width 100%
-      height 555px
-      .brand_list
-        width 100%
-        height 100%
-        margin 0 0 20px
-        padding 0 30px 25px 30px
-        .brand_item
-          margin 0 4px 4px 0
-          width 342px
-          height 260px
-          float left
-          background-size 100% 100%
-          .brand_box
-            width 342px
-            height 260px
-            line-height 260px
-            text-align center
-           
+
     .private
       font-size 32px
       width 100%
