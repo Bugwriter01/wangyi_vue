@@ -20,9 +20,14 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 .user_header
+		width 100%
 		height 88px
 		display flex
+		position fixed
+		left 0
+		top 0
 		background-color #fff
+		z-index 100
 		.header_left
 			height 100%
 			line-height 88px
