@@ -6,12 +6,13 @@
         <img src="https://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="">
       </div>
       <div class="phone_login_input_box">
-        <input type="text" placeholder="请输入手机号" class="phone_login_input">
+        <input type="tel"  maxlength="11" placeholder="请输入手机号" class="phone_login_input" v-model="phone" >
+        <i class="iconfont icon-chahao" v-show="phone" @click="phone=''"></i>
       </div>
       <div class="email_login_input_box">
         <input type="text" placeholder="请输入验证码" class="email_login_input">
         <div class="get_authCode">
-          <span>获取验证码</span>
+          <span :disabled="!isRightTel || computeTime>0"  :class={active:phone} @click="sendCode">{{computeTime>0? `短信已发送(${computeTime}s)`:'获取验证码'}}</span>
         </div>
       </div>
       <div class="tip_text">
@@ -38,6 +39,35 @@
 
 <script type="text/ecmascript-6">
   export default {
+    data(){      
+      return{
+        phone:'',
+        code:'',
+        computeTime:0
+      }
+    },
+    methods:{
+       sendCode(){
+         if(this.computeTime || !this.isRightTel){
+           return
+         }
+        this.computeTime=30
+        const intervalId = setInterval(()=>{
+          if(this.computeTime===0){
+            clearInterval(intervalId)
+          }else{
+            this.computeTime--
+          }
+        },1000)
+      }
+
+    },
+    computed:{
+      isRightTel(){
+        return /^1\d{10}$/.test(this.phone)
+      }
+    }
+
   }
 </script>
 
@@ -48,12 +78,13 @@
     .phone_login_content_img
       display flex
       justify-content center
-      margin 56px 0 135px
+      margin 200px 0 135px
       img 
         width 192px
         height 64px
     .phone_login_input_box
       height 90px
+      position relative
       display flex
       justify-content center
       .phone_login_input
@@ -61,6 +92,11 @@
         outline none 
         border-bottom 1px solid #666
         font-size 30px
+      .icon-chahao
+        font-size 30px
+        position absolute
+        right 50px
+        bottom 20px
     .email_login_input_box
       margin 30px 0 30px 0
       position relative
@@ -85,6 +121,8 @@
           font-size 28px
           color #666
           margin 0 5px 0 5px
+          &.active
+            color #000
     .tip_text
       height 45px
       padding 0 38px 45px 36px

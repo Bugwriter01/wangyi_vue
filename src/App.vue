@@ -11,8 +11,7 @@ import Footer from './components/Footer/Footer'
 export default {
   name: 'App',
   components:{
-    Footer,
-   
+    Footer,  
   }
 }
 </script>

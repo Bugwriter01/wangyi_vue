@@ -102,8 +102,8 @@ import BScroll from 'better-scroll'
     export default {
 				name: "Category",
 				mounted(){
-					console.log(this.$refs.left)
-					console.log(scrollY)
+					// console.log(this.$refs.left)
+					// console.log(scrollY)
 					new BScroll(this.$refs.left, {						
 						click:true,
 						scrollX:false,
@@ -161,7 +161,8 @@ import BScroll from 'better-scroll'
 				margin-top 50px
 				text-align center
 				&.active
-					color red	
+					color #ab2b2b
+					border-left 6px solid #ab2b2b
 		.category_list_right
 			box-sizing border-box
 			float right 
